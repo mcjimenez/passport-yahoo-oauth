@@ -1,7 +1,7 @@
-# Passport-Yahoo-OAuth
+# Passport-Yahoo-New-OAuth2
 
 [Passport](http://passportjs.org/) strategies for authenticating with [Yahoo!](http://www.yahoo.com/)
-using the OAuth 1.0a API and Oauth 2.0.
+using the OAuth 2.0 API.
 
 This module lets you authenticate using Yahoo! in your Node.js applications.
 By plugging into Passport, Yahoo! authentication can be easily and
@@ -13,34 +13,14 @@ unobtrusively integrated into any application or framework that supports
     - Original version
     $ npm install passport-yahoo-oauth
     - Forked version
-    $ npm install passport-yahoo-oauth2
+    $ npm install passport-yahoo-new-oauth2
 
 ## Usage
 
 #### Configure Strategy
 
-#### OAuth 1
-var YahooStrategy = require('passport-yahoo-oauth').Strategy;
-
-The Yahoo authentication strategy authenticates users using a Yahoo account
-and OAuth tokens.  The strategy requires a `verify` callback, which accepts
-these credentials and calls `done` providing a user, as well as `options`
-specifying a consumer key, consumer secret, and callback URL.
-
-    passport.use(new YahooStrategy({
-        consumerKey: YAHOO_CONSUMER_KEY,
-        consumerSecret: YAHOO_CONSUMER_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/yahoo/callback"
-      },
-      function(token, tokenSecret, profile, done) {
-        User.findOrCreate({ yahooId: profile.id }, function (err, user) {
-          return done(err, user);
-        });
-      }
-    ));
-
-#### OAuth2 (forked version)
-var YahooStrategy = require('passport-yahoo-oauth2').OAuth2Strategy;
+#### OAuth2 (new forked version)
+var YahooStrategy = require('passport-yahoo-new-oauth2').OAuth2Strategy;
 
     passport.use(new YahooStrategy({
         consumerKey: YAHOO_CONSUMER_KEY,
