@@ -1,6 +1,6 @@
 {
   "name": "passport-yahoo-new-oauth2",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "This is a forked version of Yahoo passport! (OAuth1 and OAuth2) authentication strategy for Passport.",
   "keywords": [
     "passport",
